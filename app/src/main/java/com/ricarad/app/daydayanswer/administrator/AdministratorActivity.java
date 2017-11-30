@@ -53,6 +53,7 @@ public class AdministratorActivity extends Activity implements PopupMenu.OnMenuI
         usercount = intent.getStringExtra("usrcount");
         password = intent.getStringExtra("password");
         username = intent.getStringExtra("username");
+
         menuButton = (Button)findViewById(R.id.top_bar_right_bn);
         backButton = (Button)findViewById(R.id.top_bar_back_bn);
         question_listview = (ListView) findViewById(R.id.question_list);
@@ -143,7 +144,6 @@ public class AdministratorActivity extends Activity implements PopupMenu.OnMenuI
     public boolean onMenuItemClick(MenuItem menuItem) {
         switch (menuItem.getItemId()){
             case R.id.add_question_item:{
-                finish();
                 Intent intent = new Intent(AdministratorActivity.this,AddQuestionActivity.class);
                 startActivity(intent);
             }break;

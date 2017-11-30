@@ -107,7 +107,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                         intent.putExtra("usrname",user.getUsername());
                         intent.putExtra("password",user.getPassword());
                         startActivityForResult(intent,ADMINISTRATOR_CODE);
-                        finish();
+
                     }else if(role.equals("普通用户")){
                         Intent intent = new Intent(LoginActivity.this,NormalUserActivity.class);
                         intent.putExtra("usercount",user.getUsercount());

@@ -1,6 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/memo_more"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/torbarbg"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/questioninfo_bnback"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/back_button_selector" />
+
+        <Button
+            android:id="@+id/editquestion_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edit"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/savequestion_button"
+            android:layout_width="27dp"
+            android:layout_height="35dp"
+            android:layout_alignRight="@id/editquestion_button"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/save"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+    </RelativeLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="问题内容:"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/question_content_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选项A:"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/Aitem_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选项B:"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/Bitem_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选项C:"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/Citem_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选项D:"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/Ditem_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="问题答案:"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/questionresult_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="问题解析:"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/questionanalysis_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+    </LinearLayout>
+</ScrollView>
 
 </LinearLayout>

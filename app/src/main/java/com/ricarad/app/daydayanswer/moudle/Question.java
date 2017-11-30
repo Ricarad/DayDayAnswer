@@ -11,7 +11,8 @@ import cn.bmob.v3.BmobObject;
 public class Question extends BmobObject implements Serializable {
     private String result;
     private String content;
-    private String questionId;
+
+    private String analysis;
     private String itemA;
     private String itemB;
     private String itemC;
@@ -19,20 +20,19 @@ public class Question extends BmobObject implements Serializable {
     public Question(){
         setTableName("Question");
     }
+    public String getAnalysis() {
+        return analysis;
+    }
+
+    public void setAnalysis(String analysis) {
+        this.analysis = analysis;
+    }
     public String getResult() {
         return result;
     }
 
     public void setResult(String result) {
         this.result = result;
-    }
-
-    public String getQuestionId() {
-        return questionId;
-    }
-
-    public void setQuestionId(String questionId) {
-        this.questionId = questionId;
     }
 
     public String getItemA() {

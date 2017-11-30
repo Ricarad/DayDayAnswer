@@ -16,7 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-
         </activity>
         <activity android:name=".activity.LoginActivity">
             <intent-filter>
@@ -29,6 +28,7 @@
         <activity android:name=".administrator.AdministratorActivity"/>
         <activity android:name=".administrator.QuestionActivity"/>
         <activity android:name=".administrator.AddQuestionActivity"/>
+        <activity android:name=".normaluser.NormalUserActivity"/>
     </application>
 
 </manifest>
