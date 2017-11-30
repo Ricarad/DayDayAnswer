@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/loginbg5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/top_bar_back_bn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/back_button_selector"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:id="@+id/top_bar_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="试题列表"
+                android:textSize="30sp"
+                android:layout_gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/top_bar_right_bn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:text="更多"
+                android:textSize="20sp"
+                android:background="@drawable/right_button_selector"
+                android:layout_marginRight="5dp"
+
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/question_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+</LinearLayout>

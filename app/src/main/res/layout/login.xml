@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/loginbg2"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <LinearLayout
+       android:layout_marginRight="20dp"
+       android:id="@+id/lin1"
+       android:layout_gravity="center"
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:layout_marginTop="150dp"
+       android:layout_alignParentTop="true"
+       android:layout_marginLeft="10dp"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true">
+       <TextView
+           android:layout_weight="1"
+           android:layout_width="0dp"
+           android:layout_height="40dp"
+           android:gravity="center"
+           android:textSize="20sp"
+
+           android:text="用户名:"/>
+       <EditText
+           android:id="@+id/usrcount_text"
+           android:layout_weight="3"
+           android:layout_width="0dp"
+           android:layout_height="40dp" />
+   </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/lin1"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textSize="20sp"
+
+            android:text="密    码:"/>
+        <EditText
+            android:password="true"
+            android:id="@+id/password_text"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:background="@color/cololSkyBlue"
+            android:text="登 录"
+            android:textSize="20sp"/>
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:background="@color/cololSkyBlue"
+            android:text="注 册"
+            android:textSize="20sp"/>
+    </LinearLayout>
+</RelativeLayout>
