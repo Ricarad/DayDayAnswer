@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 import com.ricarad.app.daydayanswer.R;
 import com.ricarad.app.daydayanswer.activity.LoginActivity;
 import com.ricarad.app.daydayanswer.moudle.Question;
+import com.ricarad.app.daydayanswer.moudle.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,9 +41,7 @@ public class AdministratorActivity extends Activity implements PopupMenu.OnMenuI
     private Button menuButton;
     private boolean isDelStat = false;
     private Button backButton;
-    private String usercount;
-    private String password;
-    private String username;
+    private User user; //从登陆界面传递过来的user
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,9 +50,7 @@ public class AdministratorActivity extends Activity implements PopupMenu.OnMenuI
         Bmob.initialize(this, "8e961ca4035d0b20d23273af6988e0c6");
         InitQuestion();
         Intent intent = getIntent();
-        usercount = intent.getStringExtra("usrcount");
-        password = intent.getStringExtra("password");
-        username = intent.getStringExtra("username");
+        user = (User)intent.getSerializableExtra("user");
 
         menuButton = (Button)findViewById(R.id.top_bar_right_bn);
         backButton = (Button)findViewById(R.id.top_bar_back_bn);
@@ -71,8 +69,8 @@ public class AdministratorActivity extends Activity implements PopupMenu.OnMenuI
             public void onClick(View view) {
                 if(!isDelStat){
                     Intent intent = new Intent();
-                    intent.putExtra("usercount",usercount);
-                    intent.putExtra("password",password);
+                    intent.putExtra("usercount",user.getUsercount());
+                    intent.putExtra("password",user.getPassword());
                     setResult(RESULT_OK,intent);
                     finish();
                 }
@@ -129,10 +127,7 @@ public class AdministratorActivity extends Activity implements PopupMenu.OnMenuI
                     question_listview.setAdapter(questionItemAdapter);
                     questionItemAdapter.notifyDataSetChanged();
                 }
-
-                Toast.makeText(AdministratorActivity.this,"查询问题表成功"+list.size(),Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onError(int i, String s) {
                 Toast.makeText(AdministratorActivity.this,"查询问题失败",Toast.LENGTH_SHORT).show();

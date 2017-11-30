@@ -29,7 +29,11 @@
                 android:text="试题列表"
                 android:textSize="30sp"
                 android:layout_gravity="center_vertical"/>
-
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/refresh_button_selector"/>
             <Button
                 android:id="@+id/top_bar_right_bn"
                 android:layout_width="50dp"

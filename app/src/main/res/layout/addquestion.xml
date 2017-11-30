@@ -7,7 +7,7 @@
         android:id="@+id/memo_more"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/torbarbg"
+        android:background="@drawable/loginbg3"
         android:gravity="center_vertical">
 
         <Button
@@ -22,10 +22,10 @@
             android:id="@+id/addquestion_button"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:background="@drawable/put"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:background="@drawable/put"
             android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 

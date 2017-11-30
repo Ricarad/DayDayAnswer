@@ -32,7 +32,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private EditText usercountText;
     private EditText passwordText;
     private final static int REGISTER_CODE = 1;
-    private final static int ADMINISTRATOR_CODE = 2;
+    private final static int ADMINISTRATOR_CODE = 1;
     private final static int NORMALUSER_CODE = 3;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,12 +60,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                    passwordText.setText(data.getStringExtra("password"));
                }
            }break;
-           case ADMINISTRATOR_CODE:{
-               if(resultCode == RESULT_OK){
-                   usercountText.setText(data.getStringExtra("usercount"));
-                   passwordText.setText(data.getStringExtra("password"));
-               }
-           }break;
+
        }
     }
 
@@ -103,17 +98,13 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                     String role = user.getRole();
                     if(role.equals("管理员")){
                         Intent intent = new Intent(LoginActivity.this,AdministratorActivity.class);
-                        intent.putExtra("usercount",user.getUsercount());
-                        intent.putExtra("usrname",user.getUsername());
-                        intent.putExtra("password",user.getPassword());
+                        intent.putExtra("user",user);
                         startActivityForResult(intent,ADMINISTRATOR_CODE);
 
                     }else if(role.equals("普通用户")){
                         Intent intent = new Intent(LoginActivity.this,NormalUserActivity.class);
-                        intent.putExtra("usercount",user.getUsercount());
-                        intent.putExtra("usrname",user.getUsername());
-                        intent.putExtra("password",user.getPassword());
-                        startActivityForResult(intent,3);
+                        intent.putExtra("user",user);
+                        startActivityForResult(intent,NORMALUSER_CODE);
                         finish();
                     }
                 }else{
