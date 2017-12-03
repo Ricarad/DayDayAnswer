@@ -10,25 +10,28 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
         </activity>
-        <activity android:name=".activity.LoginActivity">
+        <activity android:name=".activity.LoginActivity"
+                    android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RegisterActivity"/>
-        <activity android:name=".administrator.AdministratorActivity"/>
-        <activity android:name=".administrator.QuestionActivity"/>
-        <activity android:name=".administrator.AddQuestionActivity"/>
-        <activity android:name=".normaluser.NormalUserActivity"/>
+        <activity android:name=".activity.RegisterActivity"  android:launchMode="singleTask"/>
+        <activity android:name=".administrator.AdministratorActivity"  android:launchMode="singleTask"/>
+        <activity android:name=".administrator.QuestionActivity"  android:launchMode="singleTask"/>
+        <activity android:name=".administrator.AddQuestionActivity"  android:launchMode="singleTask"/>
+        <activity android:name=".normaluser.NormalUserActivity"  android:launchMode="singleTask"/>
+        <activity android:name=".normaluser.AnswerQuestionActivity" android:launchMode="singleTask"/>
+        <activity android:name=".normaluser.GradeActivity" android:launchMode="singleTask"/>
     </application>
 
 </manifest>

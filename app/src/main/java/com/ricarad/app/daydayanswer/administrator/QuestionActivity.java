@@ -119,7 +119,7 @@ public class QuestionActivity extends Activity implements View.OnClickListener{
         BitemEdit.setText(question.getItemB());
         CitemEdit.setText(question.getItemC());
         DitemEdit.setText(question.getItemD());
-        resultEdit.setText(question.getAnalysis());
+        resultEdit.setText(question.getResult());
         analysisEdit.setText(question.getAnalysis());
     }
     public void Editable(){

@@ -33,7 +33,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private EditText passwordText;
     private final static int REGISTER_CODE = 1;
     private final static int ADMINISTRATOR_CODE = 1;
-    private final static int NORMALUSER_CODE = 3;
+    private final static int NORMALUSER_CODE = 1;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,11 +101,10 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                         intent.putExtra("user",user);
                         startActivityForResult(intent,ADMINISTRATOR_CODE);
 
-                    }else if(role.equals("普通用户")){
+                    }else if(role.equals("用户")){
                         Intent intent = new Intent(LoginActivity.this,NormalUserActivity.class);
                         intent.putExtra("user",user);
                         startActivityForResult(intent,NORMALUSER_CODE);
-                        finish();
                     }
                 }else{
                     Toast.makeText(LoginActivity.this,"用户名或密码不正确",Toast.LENGTH_SHORT).show();

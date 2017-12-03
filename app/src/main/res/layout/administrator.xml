@@ -30,6 +30,7 @@
                 android:textSize="30sp"
                 android:layout_gravity="center_vertical"/>
             <Button
+                android:id="@+id/refresh_button"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
@@ -50,6 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
+
     <ListView
         android:id="@+id/question_list"
         android:layout_width="match_parent"

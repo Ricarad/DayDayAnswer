@@ -71,34 +71,38 @@ public class RegisterActivity extends Activity implements View.OnClickListener{
                 final String usercount = usercountText.getText().toString();
                 String username = usernameText.getText().toString();
                 final String password = passwordText.getText().toString();
-                final User user = new User();
-                user.setPassword(password);
-                user.setUsercount(usercount);
-                user.setUsername(username);
-                user.setRole(role);
-                BmobQuery<User> query = new BmobQuery<User>();
-                query.addWhereEqualTo("usercount",usercount);
-                query.setLimit(1);
-                query.findObjects(RegisterActivity.this, new FindListener<User>() {
-                    @Override
-                    public void onSuccess(List<User> list) {
-                        if(list.size() == 0){
-                            user.save(RegisterActivity.this);
-                            Intent intent = new Intent();
-                            intent.putExtra("usercount",usercount);
-                            intent.putExtra("password",password);
-                            setResult(RESULT_OK,intent);
-                            finish();
-                        }else {
-                            Toast.makeText(RegisterActivity.this,"用户账号已存在",Toast.LENGTH_SHORT).show();
+                if(usercount.equals("") || username.equals("") || password.equals("")){
+                    Toast.makeText(RegisterActivity.this,"不允许输入空值",Toast.LENGTH_SHORT).show();
+                }else {
+                    final User user = new User();
+                    user.setPassword(password);
+                    user.setUsercount(usercount);
+                    user.setUsername(username);
+                    user.setRole(role);
+                    BmobQuery<User> query = new BmobQuery<User>();
+                    query.addWhereEqualTo("usercount",usercount);
+                    query.setLimit(1);
+                    query.findObjects(RegisterActivity.this, new FindListener<User>() {
+                        @Override
+                        public void onSuccess(List<User> list) {
+                            if(list.size() == 0){
+                                user.save(RegisterActivity.this);
+                                Intent intent = new Intent();
+                                intent.putExtra("usercount",usercount);
+                                intent.putExtra("password",password);
+                                setResult(RESULT_OK,intent);
+                                finish();
+                            }else {
+                                Toast.makeText(RegisterActivity.this,"用户账号已存在",Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
+                        @Override
+                        public void onError(int i, String s) {
 
-                    @Override
-                    public void onError(int i, String s) {
+                        }
+                    });
+                }
 
-                    }
-                });
             }break;
         }
     }

@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ricarad.app.daydayanswer.R;
@@ -41,6 +42,7 @@ public class AdministratorActivity extends Activity implements PopupMenu.OnMenuI
     private Button menuButton;
     private boolean isDelStat = false;
     private Button backButton;
+    private Button refrshButton;
     private User user; //从登陆界面传递过来的user
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,10 +53,33 @@ public class AdministratorActivity extends Activity implements PopupMenu.OnMenuI
         InitQuestion();
         Intent intent = getIntent();
         user = (User)intent.getSerializableExtra("user");
-
+        refrshButton = (Button)findViewById(R.id.refresh_button);
         menuButton = (Button)findViewById(R.id.top_bar_right_bn);
         backButton = (Button)findViewById(R.id.top_bar_back_bn);
         question_listview = (ListView) findViewById(R.id.question_list);
+        refrshButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BmobQuery<Question> query = new BmobQuery<Question>();
+                query.findObjects(AdministratorActivity.this, new FindListener<Question>() {
+                    @Override
+                    public void onSuccess(List<Question> list) {
+                        if(list.size() != 0){
+                            questionList = list;
+                            questionItemAdapter = new QuestionItemAdapter(AdministratorActivity.this,R.layout.list_item,questionList);
+                            question_listview.setAdapter(questionItemAdapter);
+                            questionItemAdapter.notifyDataSetChanged();
+
+                        }
+
+                    }
+                    @Override
+                    public void onError(int i, String s) {
+                        Toast.makeText(AdministratorActivity.this,"查询问题失败",Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
         question_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -120,9 +145,7 @@ public class AdministratorActivity extends Activity implements PopupMenu.OnMenuI
             @Override
             public void onSuccess(List<Question> list) {
                 if(list.size() != 0){
-                    for(Question question : list){
-                        questionList.add(question);
-                    }
+                    questionList = list;
                     questionItemAdapter = new QuestionItemAdapter(AdministratorActivity.this,R.layout.list_item,questionList);
                     question_listview.setAdapter(questionItemAdapter);
                     questionItemAdapter.notifyDataSetChanged();

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/yellow_bg1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:id="@+id/head_pic"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:src="@drawable/default_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:id="@+id/slide_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:padding="6dp"
+            android:textSize="30sp"
+            android:text="陈少杰"/>
+    </LinearLayout>
+    <TextView
+        android:text="题目列表"
+        android:gravity="left"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <ListView
+        android:id="@+id/questionlist_slide_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+</LinearLayout>

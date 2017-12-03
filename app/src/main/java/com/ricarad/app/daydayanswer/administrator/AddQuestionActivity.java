@@ -52,7 +52,7 @@ public class AddQuestionActivity extends Activity {
                 if(isUpdate) {
                     final AlertDialog.Builder normalDialog =
                             new AlertDialog.Builder(AddQuestionActivity.this);
-                    normalDialog.setMessage("问题还没有提交，确定要退出吗？");
+                    normalDialog.setMessage("确定要退出吗？");
                     normalDialog.setPositiveButton("确定",
                             new DialogInterface.OnClickListener() {
                                 @Override
@@ -69,26 +69,13 @@ public class AddQuestionActivity extends Activity {
                             });
                     // 显示
                     normalDialog.show();
-                }{
-                    finish();
                 }
             }
         });
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(isUpdate){  //如果当前题目已经被添加过
-                    question.update(AddQuestionActivity.this, new UpdateListener() {
-                        @Override
-                        public void onSuccess() {
-                            Toast.makeText(AddQuestionActivity.this,"更新当前题目成功",Toast.LENGTH_SHORT).show();
-                        }
-                        @Override
-                        public void onFailure(int i, String s) {
-                            Toast.makeText(AddQuestionActivity.this,"更新失败",Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }else { //如果该题目还没有被添加过
+               //如果该题目还没有被添加过
                     isUpdate = true;
                     String content = questionEdit.getText().toString();
                     String Aitem = AitemEdit.getText().toString();
@@ -120,7 +107,6 @@ public class AddQuestionActivity extends Activity {
                             }
                         });
                     }
-                }
             }
         });
     }
