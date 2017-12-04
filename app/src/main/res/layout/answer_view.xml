@@ -161,8 +161,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:background="#F5F5F5"
                 android:text="上一题"
+                android:background="@drawable/next_pervious_button_selector"
                 android:textSize="20sp" />
 
             <Button
@@ -171,7 +171,7 @@
                 android:layout_marginLeft="190dp"
                 android:text="下一题"
                 android:textSize="20sp"
-                android:background="#F5F5F5"
+                android:background="@drawable/next_pervious_button_selector"
                 android:layout_height="wrap_content" />
         </LinearLayout>
         <LinearLayout

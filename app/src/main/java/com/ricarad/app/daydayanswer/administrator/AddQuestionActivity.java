@@ -49,7 +49,7 @@ public class AddQuestionActivity extends Activity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(isUpdate) {
+                if(!isUpdate) {
                     final AlertDialog.Builder normalDialog =
                             new AlertDialog.Builder(AddQuestionActivity.this);
                     normalDialog.setMessage("确定要退出吗？");
@@ -69,6 +69,8 @@ public class AddQuestionActivity extends Activity {
                             });
                     // 显示
                     normalDialog.show();
+                }else {
+                    finish();
                 }
             }
         });

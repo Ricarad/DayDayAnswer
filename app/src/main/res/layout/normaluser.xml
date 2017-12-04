@@ -9,10 +9,8 @@
          android:layout_width="match_parent"
          android:layout_height="50dp"
          android:layout_marginTop="200dp"
-        android:textColor="#FFCB0F"
          android:background="@drawable/startanswer_button_selector"
          android:textSize="30sp"
-
          android:text="开始答题" />
     <Button
         android:id="@+id/loginout"
@@ -21,6 +19,6 @@
         android:layout_height="50dp"
         android:background="@drawable/startanswer_button_selector"
         android:textSize="30sp"
-        android:textColor="#FFCB0F"
+
         android:text="注销"/>
 </RelativeLayout>

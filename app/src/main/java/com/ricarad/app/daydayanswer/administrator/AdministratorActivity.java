@@ -102,7 +102,7 @@ public class AdministratorActivity extends Activity implements PopupMenu.OnMenuI
                 else{
                     isDelStat = false;
                     questionItemAdapter.setDel(isDelStat);
-                    menuButton.setText("更多");
+                    menuButton.setText("");
                 }
             }
         });
@@ -121,7 +121,7 @@ public class AdministratorActivity extends Activity implements PopupMenu.OnMenuI
                     }
                     isDelStat = false;
                     questionItemAdapter.setDel(isDelStat);
-                    menuButton.setText("更多");
+                    menuButton.setText("");
                 }
             }
         });

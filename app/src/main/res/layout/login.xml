@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/loginbg2"
+    android:background="@drawable/sky2"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -64,9 +64,9 @@
         android:layout_height="35dp"
         android:layout_below="@+id/line2">
         <TextView
-            android:layout_marginLeft="255dp"
+            android:layout_marginLeft="260dp"
             android:text="记住密码"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="35dp" />
         <CheckBox
@@ -87,8 +87,7 @@
             android:layout_height="45dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-
-            android:background="@color/cololSkyBlue"
+            android:background="@drawable/login_button_selector"
             android:text="登 录"
             android:textSize="20sp"/>
         <TextView
@@ -100,8 +99,7 @@
             android:layout_height="45dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-
-            android:background="@color/cololSkyBlue"
+            android:background="@drawable/login_button_selector"
             android:text="注 册"
             android:textSize="20sp"/>
     </LinearLayout>

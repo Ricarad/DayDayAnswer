@@ -54,7 +54,7 @@ public class AnswerQuestionActivity extends Activity implements View.OnClickList
     private ArrayList<Question> questionList = new ArrayList<Question>(); //题目集合
     private ArrayList<String> answerList = new ArrayList<String>();
     private int currentIndex = 0;
-    private boolean isShowResult = false;
+    private boolean isShowResult = true;
 
     private ImageView headPic;
     private TextView nameText;
