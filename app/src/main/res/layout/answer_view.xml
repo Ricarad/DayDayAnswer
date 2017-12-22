@@ -37,167 +37,187 @@
 
             />
     </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/question_text"
-                android:text="题目："
-                android:textSize="25sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="15dp" />
-            <TextView
-                android:id="@+id/Aitem_text"
-                android:text="A."
-                android:textSize="25sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="15dp"/>
-            <TextView
-                android:id="@+id/Bitem_text"
-                android:text="B."
-                android:textSize="25sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="15dp"/>
-            <TextView
-                android:id="@+id/Citem_text"
-                android:text="C."
-                android:textSize="25sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="15dp"/>
-            <TextView
-                android:id="@+id/Ditem_text"
-                android:text="D."
-                android:textSize="25sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="15dp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <RadioGroup
-                android:id="@+id/select_radiogroup"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/question_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="题目："
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/Aitem_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A."
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/Bitem_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B."
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/Citem_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C."
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/Ditem_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D."
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"></LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/lin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/select_radiogroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/A_select"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="#FFEFD5"
+                        android:text="A"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/B_select"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="#FFE4E1"
+                        android:text="B"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/C_select"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="#FFDEAD"
+                        android:text="C"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/D_select"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="#FFC1C1"
+                        android:text="D"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lin2"
+                android:layout_below="@id/lin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/A_select"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:background="#FFEFD5"
-                    android:text="A"
+                <Button
+                    android:id="@+id/pervious_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/next_pervious_button_selector"
+                    android:text="上一题"
                     android:textSize="20sp" />
 
-                <RadioButton
-                    android:id="@+id/B_select"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:background="#FFE4E1"
-                    android:text="B"
+                <Button
+                    android:id="@+id/next_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="190dp"
+                    android:background="@drawable/next_pervious_button_selector"
+                    android:text="下一题"
                     android:textSize="20sp" />
+            </LinearLayout>
 
-                <RadioButton
-                    android:id="@+id/C_select"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:background="#FFDEAD"
-                    android:text="C"
-                    android:textSize="20sp" />
-
-                <RadioButton
-                    android:id="@+id/D_select"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:background="#FFC1C1"
-                    android:text="D"
-                    android:textSize="20sp" />
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"></LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/pervious_button"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/lin3"
+                android:layout_below="@id/lin2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="上一题"
-                android:background="@drawable/next_pervious_button_selector"
-                android:textSize="20sp" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/next_button"
-                android:layout_width="wrap_content"
-                android:layout_marginLeft="190dp"
-                android:text="下一题"
-                android:textSize="20sp"
-                android:background="@drawable/next_pervious_button_selector"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="20dp"></LinearLayout>
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/analysis_text"
-                android:text="问题解析："
-                android:textSize="25sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="15dp" />
-            <TextView
-                android:id="@+id/result_text"
-                android:text="答案："
-                android:textSize="25sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/analysis_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="问题解析："
+                    android:textSize="25sp" />
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/result_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="答案："
+                    android:textSize="25sp" />
+            </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>

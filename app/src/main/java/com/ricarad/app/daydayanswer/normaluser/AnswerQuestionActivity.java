@@ -179,7 +179,7 @@ public class AnswerQuestionActivity extends Activity implements View.OnClickList
             @Override
             public void onSuccess(List<Question> list) {
                 if(list.size() != 0){
-                    int i = 0;
+                    int i = 1;
                     for(Question question : list){
                         questionList.add(question);
                         answerList.add("");

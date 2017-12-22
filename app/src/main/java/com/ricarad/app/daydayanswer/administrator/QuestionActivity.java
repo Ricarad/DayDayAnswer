@@ -137,6 +137,7 @@ public class QuestionActivity extends Activity implements View.OnClickListener{
         resultEdit.setFocusableInTouchMode(true);
         analysisEdit.setFocusable(true);
         analysisEdit.setFocusableInTouchMode(true);
+        Toast.makeText(QuestionActivity.this,"开启编辑模式",Toast.LENGTH_SHORT).show();
     }
     public void Editenable(){
         questionEdit.setFocusable(false);
