@@ -19,7 +19,7 @@
         android:maxLines="1"
         android:maxEms="20"
         android:ellipsize="end"
-
+        android:text="123"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_weight="1" />

@@ -13,7 +13,7 @@
     android:textSize="25sp"
     android:maxLines="1"
     android:maxEms="20"
-
+    android:text="12312"
     android:ellipsize="end"
     />
 </LinearLayout>

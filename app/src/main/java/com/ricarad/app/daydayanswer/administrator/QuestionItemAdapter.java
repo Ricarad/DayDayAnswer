@@ -27,7 +27,6 @@ public class QuestionItemAdapter extends ArrayAdapter {
     private boolean isDel;  //是否显示删除复选框。显示：true；不显示：false
     private ArrayList<Question> delList;   //删除列表
     private Context context;
-
     public QuestionItemAdapter(Context context, int resource, List<Question> objects) {
         super(context, resource,objects);
         resourceId = resource;
@@ -39,7 +38,7 @@ public class QuestionItemAdapter extends ArrayAdapter {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        int i = 1;
+
         final Question question = (Question) getItem(position);
         View view;
         if (convertView == null) {
@@ -49,8 +48,9 @@ public class QuestionItemAdapter extends ArrayAdapter {
         }
         TextView questionText = (TextView)view.findViewById(R.id.question_item_name);
         final CheckBox checkBox = (CheckBox)view.findViewById(R.id.question_checkbox);
+        int i = position+1;
         questionText.setText(i+"."+question.getContent());
-        i++;
+
 
         if (isDel) {
             checkBox.setVisibility(View.VISIBLE);

@@ -93,6 +93,7 @@ public class AnswerQuestionActivity extends Activity implements View.OnClickList
         slidingMenu.setMenu(R.layout.question_slide_view);
         //View view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.question_slide_view, null);
         View view = slidingMenu.getMenu();
+
         questionSlideList = (ListView)view.findViewById(R.id.questionlist_slide_view);
         nameText = (TextView)view.findViewById(R.id.slide_name_text);
         headPic = (ImageView)view.findViewById(R.id.head_pic);
@@ -164,6 +165,7 @@ public class AnswerQuestionActivity extends Activity implements View.OnClickList
 
     }
     public void setView(int i,Question question){
+        i= i+1;
         questioncontent.setText(i+"."+question.getContent());
         Aitem.setText("A."+question.getItemA());
         Bitem.setText("B."+question.getItemB());
@@ -329,6 +331,15 @@ public class AnswerQuestionActivity extends Activity implements View.OnClickList
             }break;
             case R.id.quit_answer:{
                 Intent intent = new Intent(AnswerQuestionActivity.this,GradeActivity.class);
+                String selectItem = "";
+                for(int i = 0;i<radioSelect.getChildCount();i++){
+                    RadioButton bt = (RadioButton)radioSelect.getChildAt(i);
+                    if(bt.isChecked()){
+                        selectItem = bt.getText().toString();
+                        break;
+                    }
+                }
+                answerList.set(currentIndex,selectItem);
                 intent.putExtra("questionList",questionList);
                 intent.putExtra("answerList",answerList);
                 startActivity(intent);

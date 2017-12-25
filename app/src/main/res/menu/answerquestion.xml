@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/showresult"
-        android:title="显示/不现实 答案" />
+        android:title="显示/不显示 答案" />
     <item
         android:id="@+id/quit_answer"
         android:title="结束答题" />

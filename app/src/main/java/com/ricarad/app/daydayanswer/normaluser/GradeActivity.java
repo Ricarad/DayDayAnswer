@@ -43,7 +43,7 @@ public class GradeActivity extends Activity {
             }
         }
         if(questionNumber > 0){
-            score = (rightIndex+0.0)/(questionNumber+0.0);
+            score = (rightIndex+0.0)/(questionNumber+0.0)*100;
         }
         rightnumberText.setText("回答正确的题数："+rightIndex);
         numbersText.setText("总题数："+questionNumber);

@@ -74,7 +74,6 @@
             android:layout_width="wrap_content"
             android:orientation="horizontal">
             <RadioButton
-
                 android:layout_weight="1"
                 android:id="@+id/user_radio"
                 android:layout_width="wrap_content"

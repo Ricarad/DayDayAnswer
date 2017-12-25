@@ -69,9 +69,7 @@ public class AdministratorActivity extends Activity implements PopupMenu.OnMenuI
                             questionItemAdapter = new QuestionItemAdapter(AdministratorActivity.this,R.layout.list_item,questionList);
                             question_listview.setAdapter(questionItemAdapter);
                             questionItemAdapter.notifyDataSetChanged();
-
                         }
-
                     }
                     @Override
                     public void onError(int i, String s) {
